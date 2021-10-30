@@ -1,0 +1,103 @@
+@import "variables.scss";
+.navbar {
+  height: 50px;
+  background-color: $dark-color;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .navbar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background-color: lighten($dark-color, 10%);
+    border-radius: 50%;
+    &:hover {
+      background-color: lighten($dark-color, 50%);
+    }
+    svg {
+      fill: $white-color;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 30px;
+    color: $white-color;
+  }
+}
+.dropdown {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+  transform: translate(-45%);
+  background: $dark-color;
+  border-radius: 8px;
+  padding: 1rem;
+  right: -100px;
+  border: 1px solid $white-color;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+.links {
+  h1 {
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    &:hover {
+      background-color: $white-color;
+
+      color: $dark-color;
+    }
+  }
+}
+.popup-body {
+  position: fixed;
+  bottom: -50px;
+  left: 45%;
+  overflow: hidden;
+  height: 45px;
+  background: $dark-color;
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  padding: 2px 10px 2px 5px;
+  transition: 300ms;
+}
+.popup-body.active {
+  bottom: 5px;
+}
+.popup-icon {
+  margin: 0 20px 0 5px;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin: 5px 2px 2px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop-line {
+  width: 4px;
+  height: 100%;
+  margin: 2px 5px 2px 0;
+}
+.checked {
+  .popup-icon,
+  .pop-line {
+    background-color: $green-color;
+  }
+}
+.canceled {
+  .popup-icon,
+  .pop-line {
+    background-color: $red-color;
+  }
+}

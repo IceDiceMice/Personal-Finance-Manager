@@ -1,0 +1,184 @@
+@import "layout.scss";
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  height: 100vh;
+  background-color: $white-color;
+}
+h1,
+h2 {
+  color: $dark-color;
+}
+table,
+th,
+tr,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+th,
+td {
+  text-align: left;
+  input {
+    width: 70%;
+    border: 1px solid $dark-color;
+    border-radius: 2px;
+    padding: 5px;
+  }
+}
+
+table {
+  margin: 20px 0 20px 0;
+  width: 50vw;
+}
+
+tr th:nth-child(4),
+th:nth-child(7) {
+  width: 10%;
+}
+tr th:nth-child(1),
+td:nth-child(1) {
+  text-align: center;
+}
+
+.report-table {
+  height: fit-content;
+
+  td,
+  th {
+    text-align: left !important;
+  }
+  table {
+    width: 25vw;
+  }
+}
+ul {
+  list-style: none;
+}
+select {
+  padding: 5px;
+  width: 30%;
+}
+.input-pos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  label {
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+  }
+  input {
+    width: 60%;
+  }
+}
+.form-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0 0 30px;
+  a > button {
+    width: fit-content;
+    padding: 10px;
+    background: $blue-color;
+    color: $white-color;
+    border: none;
+
+    &:hover {
+      background: darken($blue-color, 5%);
+    }
+    &:active {
+      background: $blue-color;
+    }
+  }
+}
+.form-table {
+  margin: 10px 0 10px 0;
+  width: fit-content;
+  background-color: $darker-white;
+  padding: 20px;
+  border-radius: 1%;
+}
+.table-buttons {
+  button {
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+  }
+}
+.edit-body {
+  margin: 20px 0 0 30px;
+  h1 {
+    color: $dark-color;
+  }
+}
+.edit-buttons {
+  margin-top: 20px;
+  padding-left: 20%;
+  button {
+    padding: 5px;
+    margin-right: 10px;
+  }
+}
+.edit-block {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 10px 0;
+
+  background-color: $darker-white;
+  padding: 20px;
+  border-radius: 1%;
+  width: 50vw;
+  input {
+    padding: 5px;
+  }
+}
+#describe {
+  width: 60%;
+}
+#date {
+  width: 30%;
+}
+.report-container {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+.chart-conteiner {
+  display: flex;
+  justify-content: center;
+}
+.operation-item {
+  input {
+    width: auto;
+  }
+}
+.categories-table {
+  > input {
+    border: 1px solid $dark-color;
+    border-radius: 2px;
+    padding: 5px;
+    width: 30%;
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+}
+.report-by-day {
+  height: 50vh;
+  width: 50vw;
+}
+#generator-summary {
+  background-color: rgb(131, 196, 131);
+  font-weight: bold;
+}
