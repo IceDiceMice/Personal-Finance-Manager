@@ -33,9 +33,7 @@ export default function AddOperation({
   };
 
   const handleGetAll = () => {
-    axios
-      .get("http://localhost:4000/category/")
-      .then((res) => setCategories(res.data));
+    axios.get("/category").then((res) => setCategories(res.data));
   };
 
   useEffect(() => {
@@ -67,7 +65,7 @@ export default function AddOperation({
     console.log(values);
     e.preventDefault();
     axios
-      .post("http://localhost:4000/operations/add", values)
+      .post("/operations/add", values)
       .then((res) => console.log(res.data))
       .then(reset());
   };

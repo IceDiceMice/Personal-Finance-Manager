@@ -25,7 +25,7 @@ export default function OperationsItem({ index, handleGetAll, operation }) {
 
   const deleteOperation = (id) => {
     axios
-      .delete(`http://localhost:4000/operations/delete/${id}`)
+      .delete(`/operations/delete/${id}`)
       .then((res) => console.log(res.data))
       .then(handleGetAll);
   };
@@ -34,7 +34,7 @@ export default function OperationsItem({ index, handleGetAll, operation }) {
     setEditMode(false);
     console.log(values);
     axios
-      .put(`http://localhost:4000/operations/update/${id}`, values)
+      .put(`/operations/update/${id}`, values)
       .then((res) => console.log(res.data))
       .then(handleGetAll);
   };

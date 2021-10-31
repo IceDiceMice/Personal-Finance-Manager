@@ -50,7 +50,7 @@ export default function ReportGenerator({
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/operations/")
+      .get("/operations/")
       .then((res) => setOperations(res.data))
       .then();
   }, []);

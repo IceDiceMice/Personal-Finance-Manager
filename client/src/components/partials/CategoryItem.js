@@ -11,7 +11,7 @@ export default function CategoryItem({ index, category, handleGetAll }) {
 
   const deleteCategory = (id) => {
     axios
-      .delete(`http://localhost:4000/category/delete/${id}`)
+      .delete(`/category/delete/${id}`)
       .then((res) => console.log(res.data))
       .then(handleGetAll);
   };
@@ -19,7 +19,7 @@ export default function CategoryItem({ index, category, handleGetAll }) {
   const editCategory = (id) => {
     setEditMode(false);
     axios
-      .put(`http://localhost:4000/category/update/${id}`, { name, description })
+      .put(`/category/update/${id}`, { name, description })
       .then((res) => console.log(res.data))
       .then(handleGetAll);
   };

@@ -10,9 +10,7 @@ export default function Operations({ open, setOpen }) {
 
   let categoryArr = [];
   const handleGetAll = () => {
-    axios
-      .get("http://localhost:4000/operations/")
-      .then((res) => setOperations(res.data));
+    axios.get("/operations").then((res) => setOperations(res.data));
   };
 
   useEffect(() => {
