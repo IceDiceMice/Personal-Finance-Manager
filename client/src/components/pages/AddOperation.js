@@ -33,7 +33,7 @@ export default function AddOperation({
   };
 
   const handleGetAll = () => {
-    axios.get(`/category`).then((res) => setCategories(res.data));
+    axios.get(`api/category`).then((res) => setCategories(res.data));
   };
 
   useEffect(() => {

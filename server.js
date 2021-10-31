@@ -24,8 +24,8 @@ app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use("/category", categoryRouter);
-app.use("/operations", operationsRouter);
+app.use("api/category", categoryRouter);
+app.use("api/operations", operationsRouter);
 
 mongoose
   .connect(process.env.MONGO_URL, { useNewUrlParser: true })

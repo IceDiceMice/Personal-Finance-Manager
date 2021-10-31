@@ -9,7 +9,9 @@ export default function Categories({ open, setOpen }) {
   const [query, setQuery] = useState("");
 
   const handleGetAll = () => {
-    axios.get(`/category`).then((res) => setCategories(res.data));
+    axios.get("api/category").then((res) => setCategories(res.data)
+      
+    );
   };
 
   useEffect(() => {
