@@ -50,7 +50,7 @@ export default function ReportGenerator({
 
   useEffect(() => {
     axios
-      .get(`api/operations`)
+      .get("api/operations")
       .then((res) => setOperations(res.data))
       .then();
   }, []);

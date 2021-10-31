@@ -8,6 +8,7 @@
   justify-content: space-between;
   width: 100%;
   .navbar-icon {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +25,7 @@
       height: 20px;
     }
   }
+
   a {
     text-decoration: none;
   }
@@ -62,7 +64,8 @@
 .popup-body {
   position: fixed;
   bottom: -50px;
-  left: 45%;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   height: 45px;
   background: $dark-color;

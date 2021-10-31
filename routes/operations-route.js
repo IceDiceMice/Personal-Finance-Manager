@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Operations = require("../models/operations-schema");
 const ObjectID = require("mongodb").ObjectId;
+
 router.get("/", async (req, res) => {
   try {
     const operation = await Operations.find();
@@ -33,6 +34,7 @@ router.post("/add", async (req, res) => {
     console.log(err);
   }
 });
+
 router.put("/update/:id", (req, res) => {
   Operations.findById(req.params.id, async (err, operation) => {
     try {
@@ -53,6 +55,7 @@ router.put("/update/:id", (req, res) => {
     }
   });
 });
+
 router.delete("/delete/:id", async (req, res) => {
   let { id } = req.params;
   try {

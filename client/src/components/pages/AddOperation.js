@@ -33,7 +33,7 @@ export default function AddOperation({
   };
 
   const handleGetAll = () => {
-    axios.get(`api/category`).then((res) => setCategories(res.data));
+    axios.get("api/category").then((res) => setCategories(res.data));
   };
 
   useEffect(() => {
@@ -65,7 +65,7 @@ export default function AddOperation({
     console.log(values);
     e.preventDefault();
     axios
-      .post(`/operations/add`, values)
+      .post("/operations/add", values)
       .then((res) => console.log(res.data))
       .then(reset());
   };
