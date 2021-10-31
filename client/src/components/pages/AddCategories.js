@@ -32,7 +32,7 @@ export default function AddCategories({
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("/category/add", { name, description })
+      .post(`${process.env.link}/category/add`, { name, description })
       .then((res) => console.log(res.data))
       .then(reset());
   };

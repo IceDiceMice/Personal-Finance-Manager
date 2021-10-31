@@ -25,7 +25,7 @@ export default function OperationsItem({ index, handleGetAll, operation }) {
 
   const deleteOperation = (id) => {
     axios
-      .delete(`/operations/delete/${id}`)
+      .delete(`${process.env.link}/operations/delete/${id}`)
       .then((res) => console.log(res.data))
       .then(handleGetAll);
   };
@@ -34,7 +34,7 @@ export default function OperationsItem({ index, handleGetAll, operation }) {
     setEditMode(false);
     console.log(values);
     axios
-      .put(`/operations/update/${id}`, values)
+      .put(`${process.env.link}/operations/update/${id}`, values)
       .then((res) => console.log(res.data))
       .then(handleGetAll);
   };
