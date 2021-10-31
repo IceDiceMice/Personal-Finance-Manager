@@ -2,6 +2,7 @@
   "name": "personal-manager-project",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://the-personal-finance-manager.herokuapp.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
