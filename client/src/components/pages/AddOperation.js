@@ -4,7 +4,7 @@ import * as axios from "axios";
 import PopUp from "../partials/PopUp";
 import { BsCheck } from "react-icons/bs";
 
-export default function EditOperation({
+export default function AddOperation({
   active,
   setActive,
   data,

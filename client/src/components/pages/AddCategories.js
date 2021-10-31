@@ -4,7 +4,7 @@ import * as axios from "axios";
 import PopUp from "../partials/PopUp";
 import { BsCheck } from "react-icons/bs";
 
-export default function EditCategories({
+export default function AddCategories({
   active,
   setActive,
   data,
