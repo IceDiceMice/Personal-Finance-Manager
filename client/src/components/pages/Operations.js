@@ -10,9 +10,7 @@ export default function Operations({ open, setOpen }) {
 
   let categoryArr = [];
   const handleGetAll = () => {
-    axios
-      .get(`${process.env.link}/operations`)
-      .then((res) => setOperations(res.data));
+    axios.get(`/operations`).then((res) => setOperations(res.data));
   };
 
   useEffect(() => {
