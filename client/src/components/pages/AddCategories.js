@@ -14,27 +14,39 @@ export default function AddCategories({
 }) {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const popUpHandler = () => {
+    setActive(true);
+    setTimeout(() => setActive(false), 2000);
+  };
 
-  const reset = () => {
+  const reset = (e) => {
+    e.preventDefault();
     setName("");
     setDescription("");
 
     setData({
       class: "checked",
-      text: "Збережено",
+      text: "Очищено",
       icon: <BsCheck className="popup-icon" />,
     });
 
-    setActive(true);
-    setTimeout(() => setActive(false), 2000);
+    popUpHandler();
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("api/category/add", { name, description })
-      .then((res) => console.log(res.data))
-      .then(reset());
+      .then((res) => console.log(res.data));
+
+    setName("");
+    setDescription("");
+    setData({
+      class: "checked",
+      text: "Збережено",
+      icon: <BsCheck className="popup-icon" />,
+    });
+    popUpHandler();
   };
 
   return (

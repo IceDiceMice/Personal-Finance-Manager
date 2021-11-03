@@ -48,6 +48,10 @@ export default function AddOperation({
   };
 
   arrFilter();
+  const popUpHandler = () => {
+    setActive(true);
+    setTimeout(() => setActive(false), 2000);
+  };
 
   const reset = (e) => {
     e.preventDefault();
@@ -57,17 +61,22 @@ export default function AddOperation({
       text: "Очищено!",
       icon: <BsCheck className="popup-icon" />,
     });
-    setActive(true);
-    setTimeout(() => setActive(false), 2000);
+    popUpHandler();
   };
 
   const handleSubmit = (e) => {
-    console.log(values);
     e.preventDefault();
     axios
-      .post("/operations/add", values)
-      .then((res) => console.log(res.data))
-      .then(reset());
+      .post("api/operations/add", values)
+      .then((res) => console.log(res.data));
+    setData({
+      class: "checked",
+      text: "Додано!",
+      icon: <BsCheck className="popup-icon" />,
+    });
+    popUpHandler();
+
+    setValues(initialValues);
   };
   return (
     <div>
